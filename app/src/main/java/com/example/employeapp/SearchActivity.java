@@ -33,6 +33,10 @@ DbHelper mydb;
                 Cursor c=mydb.SearchEmployee(getcode);
                 if (c.getCount()==0)
                 {
+                    ed1.setText("");
+                    ed2.setText("");
+                    ed3.setText("");
+                    ed4.setText("");
                     Toast.makeText(getApplicationContext(), "NO RESULT", Toast.LENGTH_SHORT).show();
                 }
                 else

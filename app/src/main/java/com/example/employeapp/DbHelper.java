@@ -55,10 +55,10 @@ public class DbHelper extends SQLiteOpenHelper {
             return true;
         }
     }
-    public Cursor SearchEmployee(String empcode)
+    public Cursor SearchEmployee(String pcode)
     {
         SQLiteDatabase db=this.getWritableDatabase();
-        String query="select * from "+TableName+" where "+col2+"="+"'"+empcode+"'";
+        String query="select * from "+TableName+" where "+col2+"="+"'"+pcode+"'";
         Cursor c=db.rawQuery(query,null);
         return c;
 

@@ -34,9 +34,19 @@ DbHelper mydb;
                 getname = ed2.getText().toString();
                 getdesignation = ed3.getText().toString();
                 getmobileno = ed4.getText().toString();
+
+                if (getmobileno.matches("^[6-9]\\d{9}$"))
+                {
+                    Toast.makeText(getApplicationContext(), "valid", Toast.LENGTH_SHORT).show();
+                }
+                else
+                    {
+                    Toast.makeText(getApplicationContext(),"invalid",Toast.LENGTH_SHORT).show();
+                }
                 boolean status = mydb.insertEmployee(getemployeecode, getname, getdesignation, getmobileno);
                 if (status == true)
                 {
+
                     Toast.makeText(getApplicationContext(), "Succesfully Inserted", Toast.LENGTH_SHORT).show();
                 } else
                     {
